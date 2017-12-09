@@ -1,0 +1,18 @@
+package musicbox;
+
+/**
+ * Created by dobner on 12/9/2017.
+ */
+public abstract class CommonProxy {
+    public void preInit() {
+
+    }
+
+    public void init() {
+
+    }
+
+    public void postInit() {
+
+    }
+}
