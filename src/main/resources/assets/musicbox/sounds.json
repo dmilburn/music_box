@@ -1,0 +1,10 @@
+{
+  "owl_noises": {
+    "sounds": [
+      {
+        "name": "musicbox:music/owl_noises",
+        "stream": true
+      }
+    ]
+  }
+}

@@ -1,10 +1,12 @@
 package musicbox;
 
+import net.minecraft.block.Block;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import org.apache.logging.log4j.Logger;
 
 /**
  * Created by dobner on 12/9/2017.
@@ -17,8 +19,11 @@ public class MusicBox {
     @SidedProxy(clientSide="musicbox.ClientOnlyProxy", serverSide = "musicbox.DedicatedServerProxy")
     public static CommonProxy proxy;
 
+    public static Logger logger;
+
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
+        logger = event.getModLog();
         proxy.preInit();
     }
 
